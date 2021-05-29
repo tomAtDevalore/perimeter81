@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "3307f5ff-2b20-45f2-9ee2-0cc4fd896195",
+		"name": "Perimeter81",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tom.shaffir@gmail.com\",\r\n    \"streetAddress\":\"milky way 29, Tel Aviv\",\r\n    \"firstName\":\"Tom\",\r\n    \"lastName\":\"Shaffir\",\r\n    \"password\":\"1234werock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5567/api/user/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tom.shaffir@gmail.com\",\r\n    \"password\":\"1234werock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5567/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIwNmJiNzhhNi00YzQwLTQwN2QtODY3NS1hYTgxOTIwM2NmMGYiLCJpYXQiOjE2MjIzMTg3ODUsImV4cCI6MTYyMjM2ODc4NX0.61_Dpnc1MbP2cHyKzbQr6J3jkxE0M-a-u7kwy95Nmw0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5567/api/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user by email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI0NmM0ODc3MS0xYzU5LTRkNTItYTJlMy0wZjIxZmQ2MDYzMTYiLCJpYXQiOjE2MjIzMTkwNjIsImV4cCI6MTYyMjM2OTA2Mn0.HcrQs4wLrOtATyDT6eKRglAE0M5dpocFZBjQ8kO-2C4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"streetAddress\":\"no land\",\r\n    \"firstName\":\"Alon\",\r\n     \"lastName\":\"Rosen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5567/api/user/updateuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"user",
+						"updateuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI0NmM0ODc3MS0xYzU5LTRkNTItYTJlMy0wZjIxZmQ2MDYzMTYiLCJpYXQiOjE2MjIzMTkwNjIsImV4cCI6MTYyMjM2OTA2Mn0.HcrQs4wLrOtATyDT6eKRglAE0M5dpocFZBjQ8kO-2C4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5567/api/user/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"user",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cjCI6IkpXVCJ9.eyJfaWQiOiJkOWY0YTUyZC1kZDM5LTRlYzctYTk2My1lMDU5YmNjMDk3ZDkiLCJpYXQiOjE2MjIyODE5MDUsImV4cCI6MTYyMjc4MTkwNX0.AL0plEswX0gcUFHrCJpo5T7Mqb9rdHzXO1kmJwIzziM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5567/api/product/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"product",
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add items to cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI5ODVmNmZiOS0wNmI4LTQ4ZTMtYTgyMC1iYWY2YTkwOGY4MDUiLCJpYXQiOjE2MjIzMTkyNjcsImV4cCI6MTYyMjM2OTI2N30.koAkmYClEbpdCguP1exD6JfNt_7Z9W83LJQeZQXh8vk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\":[\r\n          {\r\n        \"productName\": \"Margarita\",\r\n        \"productPrice\": 15\r\n    },\r\n    {\r\n        \"productName\": \"New York\",\r\n        \"productPrice\": 17\r\n    },\r\n    {\r\n        \"productName\": \"Tel Aviv\",\r\n        \"productPrice\": 14\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5567/api/user/additems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5567",
+					"path": [
+						"api",
+						"user",
+						"additems"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
